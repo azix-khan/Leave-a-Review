@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       setState(() {
         value = 2.0;
         activeIndex = 2;
@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TweenAnimationBuilder(
-                        duration: Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 1000),
                         tween: Tween<double>(begin: 1, end: 0),
                         curve: Curves.easeOutBack,
                         builder: (context, doubleVal, child) {
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       ),
                       TweenAnimationBuilder(
-                        duration: Duration(milliseconds: 1000),
+                        duration: const Duration(milliseconds: 1000),
                         tween: Tween<double>(begin: 1, end: 0),
                         curve: Curves.easeOutBack,
                         builder: (context, doubleVal, child) {
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget headerSection() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
         children: [
           Row(
@@ -106,12 +106,12 @@ class _HomeScreenState extends State<HomeScreen> {
               CircleAvatar(
                 radius: 25,
                 backgroundColor: AppColors.bgBlack.withOpacity(0.1),
-                child: Icon(Icons.close),
+                child: const Icon(Icons.close),
               ),
               CircleAvatar(
                 radius: 25,
                 backgroundColor: AppColors.bgBlack.withOpacity(0.1),
-                child: Icon(Icons.info_outline),
+                child: const Icon(Icons.info_outline),
               ),
             ],
           ),
@@ -207,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: AppSizing.height(context) * 0.1,
               child: PageView.builder(
                   allowImplicitScrolling: false,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   controller: pageController,
                   itemCount: items.length,
                   onPageChanged: (value) {
@@ -274,7 +274,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: ElevatedButton.icon(
                       iconAlignment: IconAlignment.end,
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(150, 60),
+                        minimumSize: const Size(150, 60),
                       ),
                       onPressed: () {},
                       label: const Text("Submit"),

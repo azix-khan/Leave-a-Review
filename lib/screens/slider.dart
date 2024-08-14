@@ -22,7 +22,7 @@ class _AppSliderState extends State<AppSlider> {
       data: SfSliderThemeData(
         activeLabelStyle: Theme.of(context).textTheme.displaySmall,
         inactiveLabelStyle: Theme.of(context).textTheme.displaySmall,
-        labelOffset: Offset(0.0, 30.0),
+        labelOffset: const Offset(0.0, 30.0),
         activeTrackColor: AppColors.bgBlack.withOpacity(0.2),
         inactiveTrackColor: AppColors.bgBlack.withOpacity(0.2),
       ),
